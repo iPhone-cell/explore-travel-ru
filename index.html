@@ -11,6 +11,8 @@
 	<link
 		href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Mulish:wght@300;400;700&family=Playfair+Display:wght@700&display=swap"
 		rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+
 	<link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -24,29 +26,34 @@
 					<nav class="header__nav">
 						<ul class="header__nav-list">
 							<li class="header__nav-item">
-								<a href="#" class="header__nav-link header__nav-link_active">
+								<a href="#" class="header__nav-link header__nav-link_active nav-link">
 									Главная
 								</a>
-								<a href="#" class="header__nav-link">
+								<a href="#" class="header__nav-link nav-link">
 									Наша цель
 								</a>
-								<a href="#" class="header__nav-link">
+								<a href="#" class="header__nav-link nav-link">
 									О нас
 								</a>
-								<a href="#" class="header__nav-link">
+								<a href="#" class="header__nav-link nav-link">
 									Стать партнёром
 								</a>
 							</li>
 						</ul>
 					</nav>
 					<div class="header__buttons">
-						<a href="#" class="btn header__btn btn_opacity">
+						<a href="#" class="btn header__btn btn_opacity nav-link">
 							Войти
 						</a>
-						<a href="#" class="btn header__btn btn_orange">
+						<a href="#" class="btn header__btn btn_orange nav-link">
 							Зарегистрироваться
 						</a>
 					</div>
+				</div>
+				<div class="hamburger">
+					<span class="bar"></span>
+					<span class="bar"></span>
+					<span class="bar"></span>
 				</div>
 			</div>
 		</div>
@@ -256,32 +263,67 @@
 					<h2 class="reviews__title">
 						Отзывы
 					</h2>
-					<div class="slider">
-						<div class="reviews__item">
-							<div class="reviews__item-info">
-								<div class="reviews__item-rate">
-									<img src="img/reviews/star.svg" alt="">
-									<img src="img/reviews/star.svg" alt="">
-									<img src="img/reviews/star.svg" alt="">
-									<img src="img/reviews/star.svg" alt="">
-									<img src="img/reviews/star.svg" alt="">
-								</div>
-								<p class="reviews__item-text">
-									Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis asperiores
-									fugit suscipit quae, accusantium consequuntur accusamus impedit ex, mollitia, quo
-									ratione consequatur sequi sed quibusdam at assumenda libero incidunt repudiandae.
-								</p>
-								<div class="reviews__item-label">
-									<h3>
-										Эдвард Ньюгейт
-									</h3>
-									<div class="reviews__item-label-subtitle">
-										Круг основателей
+					<div class="reviews__slider" id="reviewsSlider">
+						<div class="slick-item">
+							<div class="reviews__item">
+								<div class="reviews__item-info">
+									<div class="reviews__item-rate">
+										<img src="img/reviews/star.svg" alt="">
+										<img src="img/reviews/star.svg" alt="">
+										<img src="img/reviews/star.svg" alt="">
+										<img src="img/reviews/star.svg" alt="">
+										<img src="img/reviews/star.svg" alt="">
+									</div>
+									<p class="reviews__item-text">
+										Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis asperiores
+										fugit suscipit quae, accusantium consequuntur accusamus impedit ex, mollitia,
+										quo
+										ratione consequatur sequi sed quibusdam at assumenda libero incidunt
+										repudiandae.
+									</p>
+									<div class="reviews__item-label">
+										<h3>
+											Эдвард Ньюгейт
+										</h3>
+										<div class="reviews__item-label-subtitle">
+											Круг основателей
+										</div>
 									</div>
 								</div>
+								<div class="reviews__item-author">
+									<img src="img/reviews/author.jpg" alt="" class="reviews__item-author">
+									<div class="reviews__item-author-block"></div>
+								</div>
 							</div>
-							<div class="reviews__item-author">
-								<img src="img/reviews/author.jpg" alt="" class="reviews__item-author">
+						</div>
+						<div class="slick-item">
+							<div class="reviews__item">
+								<div class="reviews__item-info">
+									<div class="reviews__item-rate">
+										<img src="img/reviews/star.svg" alt="">
+										<img src="img/reviews/star.svg" alt="">
+										<img src="img/reviews/star.svg" alt="">
+										<img src="img/reviews/star.svg" alt="">
+										<img src="img/reviews/star.svg" alt="">
+									</div>
+									<p class="reviews__item-text">
+										Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis asperiores
+										fugit suscipit quae, accusantium consequuntur accusamus impedit ex, mollitia,
+										quo
+									</p>
+									<div class="reviews__item-label">
+										<h3>
+											Эдвард Ньюгейт
+										</h3>
+										<div class="reviews__item-label-subtitle">
+											Круг основателей
+										</div>
+									</div>
+								</div>
+								<div class="reviews__item-author">
+									<img src="img/reviews/author.jpg" alt="" class="reviews__item-author">
+									<div class="reviews__item-author-block"></div>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -507,11 +549,11 @@
 	</footer>
 
 	<!-- JavaScript -->
-	<script type=" text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
 		integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
 		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-	<script src="app.js"></script>
+	<script type=" text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+	<script src="js/app.js"></script>
 </body>
 
 </html>
